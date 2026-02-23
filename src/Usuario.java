@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
         private static final int MAX_LIBROS = 3;
 
-        // Constructor
+
         public Usuario(int id, String nombre) {
             this.id = id;
             this.nombre = nombre;
@@ -18,7 +18,7 @@ import java.util.ArrayList;
             this.librosPrestados = new ArrayList<>();
         }
 
-        // Método para prestar libro
+
         public void prestarLibro(String tituloLibro) {
 
             if (estado == EstadoUsuario.SANCIONADO) {
@@ -35,13 +35,13 @@ import java.util.ArrayList;
             System.out.println("Libro prestado correctamente.");
         }
 
-        // Método para devolver libro
+
         public void devolverLibro(String tituloLibro) {
             librosPrestados.remove(tituloLibro);
             System.out.println("Libro devuelto.");
         }
 
-        // Método para mostrar información
+
         public void mostrarInfo() {
             System.out.println("ID: " + id);
             System.out.println("Nombre: " + nombre);
@@ -49,7 +49,7 @@ import java.util.ArrayList;
             System.out.println("Libros prestados: " + librosPrestados);
         }
 
-        // Método para cambiar estado
+
         public void cambiarEstado(EstadoUsuario nuevoEstado) {
             this.estado = nuevoEstado;
         }
